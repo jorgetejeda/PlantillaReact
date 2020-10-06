@@ -1,7 +1,14 @@
+// TODO: 
+// [] Separar los componentes
+// [] Agregar los valores digitados en el formulario a la plantilla
+// [] Agregar funcionalidad para pasar numeros a letras
+// [] Limpiar el formulario
+// [] Crear una mascara para los campos que lo necesiten
+// [] exportar la plantilla a word y pdf
+
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-
 import "./App.css";
 
 const App = () => (
