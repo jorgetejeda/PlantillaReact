@@ -1,8 +1,9 @@
 import React from 'react';
-export const Template = () => {
+import {numeroALetras} from "../numeroALetras";
+export const Template = ({values}) => {
   return (
     <React.Fragment>
-      <div id="source-html" class="page p-3">
+      <div id="source-html" className="page p-3">
         <center>
           <div></div>
           <span style={{ fontSize: "13px" }}>
@@ -26,7 +27,7 @@ export const Template = () => {
         <br />
         <br />
         <div style={{ fontSize: "14px" }}>
-          Distinguidos señores del adsadsf:
+          Distinguidos señores del {values.bankName}:
         </div>
         <br />
         <br />
@@ -34,10 +35,10 @@ export const Template = () => {
         <div>
           <p style={{ fontSize: "14px" }}>
             Por medio de la presente nos dirigimos a ustedes para certificar que
-            el(la) señor(a) <b>asasdfas</b> portador(a) de la cédula <b>No. </b>{" "}
-            labora en nuestra empresa en la posición <b>ASDFASDF</b> desde el{" "}
+  el(la) señor(a) <b>{(values.name).toUpperCase()}</b> portador(a) de la cédula <b>No. {values.identification}</b>{" "}
+            labora en nuestra empresa en la posición <b>{values.position}</b> desde el{" "}
             <b>6 de Octubre de 2020</b>, devengando un salario por hora de{" "}
-            <b>RD$asdfas PESOS DOMINICANOS CON 00/100</b>, sin sus respectivos
+            <b>RD${values.salary} {numeroALetras(values.salary)} CON 00/100</b>, sin sus respectivos
             incentivos incluidos. Solicitamos la apertura de una cuenta nomina
             en su banco.
           </p>
@@ -49,12 +50,12 @@ export const Template = () => {
         <br />
         <div style={{ fontSize: "14px" }}>
           <span style={{ fontSize: "15px" }}>
-            <b>asdfasd</b>
+            <b>{(values.attendedBy).toUpperCase()}</b>
           </span>
           <br />
           Coordinadora de Reclutamiento
           <br />
-          Working Bees DR, SRL
+          Unboxing Software
         </div>
       </div>
     </React.Fragment>
